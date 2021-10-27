@@ -18,6 +18,7 @@ module.exports = {
             })
 
             console.log(context.req.cookies)
+            console.log(context.req.headers)
 
             return "dummy mutation"
         }
