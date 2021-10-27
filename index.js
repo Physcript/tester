@@ -23,7 +23,7 @@ const server = async (typeDefs,resolvers) => {
     const PORT = process.env.PORT || 4000
 
     const corsOptions = {
-        origin: true,
+        origin: ['https://studio.apollographql.com','http://localhost:3000'],
         credentials: true
     }
 

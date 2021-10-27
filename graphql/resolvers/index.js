@@ -13,6 +13,7 @@ module.exports = {
     },
     Mutation: {
         async _dummy(_,{},context) {
+            
             pubsub.publish('DUMMY',{
                 _dummy: 'SUBSCRIPTION'
             })
