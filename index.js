@@ -23,11 +23,12 @@ const server = async (typeDefs,resolvers) => {
     const PORT = process.env.PORT || 4000
 
     const corsOptions = {
-        origin: ['https://studio.apollographql.com','http://localhost:3000'],
+        origin: true,
         credentials: true
     }
 
     app.use(cookieParser())
+    app.set("trust proxy", 1);
     app.use(graphqlUploadExpress())
     app.use(cors(corsOptions))
 
